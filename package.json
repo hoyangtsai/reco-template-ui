@@ -15,6 +15,6 @@
   "devDependencies": {
     "myapp-file-loader": "^0.2.0"
   },
-  "author": "ben",
-  "license": "ISC"
+  "author": "allanyu <allanyu@tencent.com>",
+  "license": "Tencent Private"
 }
