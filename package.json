@@ -1,0 +1,20 @@
+{
+  "name": "@tencent/nodinx-template-ui",
+  "version": "0.0.1",
+  "description": "nodinx pure webrebuild biolerplate",
+  "scripts": {
+    "dev": "nodx server --open",
+    "build": "nodx build",
+    "create": "nodx create",
+    "publish": "nodx publish"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "react-router": "^3.0.0"
+  },
+  "devDependencies": {
+    "myapp-file-loader": "^0.2.0"
+  },
+  "author": "ben",
+  "license": "ISC"
+}
