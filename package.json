@@ -6,7 +6,7 @@
     "dev": "nodx server --open",
     "build": "nodx build",
     "create": "nodx create",
-    "publish": "nodx publish"
+    "upload": "nodx upload"
   },
   "dependencies": {
     "classnames": "^2.2.5",
