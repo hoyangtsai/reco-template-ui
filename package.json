@@ -1,20 +1,32 @@
 {
   "name": "@tencent/nodinx-template-ui",
-  "version": "0.0.1",
-  "description": "nodinx pure webrebuild biolerplate",
+  "version": "1.0.1",
+  "description": "boilerplate for nodinx framework",
   "scripts": {
-    "dev": "nodx server --open",
-    "build": "nodx build",
-    "create": "nodx create",
-    "upload": "nodx upload"
+    "autod": "autod",
+    "lint": "eslint .",
+    "test": "npm run lint -- --fix && npm run test-boilerplate",
+    "ci": "npm run lint && npm run ci-boilerplate",
+    "test-boilerplate": "npm run build && npm run install-deps && cd dist && npm test",
+    "ci-boilerplate": "npm run build && npm run install-deps && cd dist && npm run ci",
+    "build": "egg-init dist --force --silent --template=./",
+    "install-deps": "cd dist && ../node_modules/.bin/npminstall autod-egg && ../node_modules/.bin/autod && ../node_modules/.bin/npminstall"
   },
+  "homepage": "http://git.code.oa.com/WSRD-Tech-Center-Lib/nodinx-template-ui",
+  "bugs": "https://github.com/WSRD-Tech-Center-Lib/nodinx/issues",
+  "repository": {
+    "type": "http",
+    "url": "http://git.code.oa.com/WSRD-Tech-Center-Lib/nodinx-template-ui.git"
+  },
+  "author": "keithytsai <keithytsai@tencent.com>",
   "dependencies": {
-    "classnames": "^2.2.5",
-    "react-router": "^3.0.0"
   },
   "devDependencies": {
-    "myapp-file-loader": "^0.2.0"
+    "eslint": "^4.0.0",
+    "eslint-config-bugly": "^14.1.6",
+    "npminstall": "^2.11.2"
   },
-  "author": "allanyu <allanyu@tencent.com>",
-  "license": "Tencent Private"
+  "ci": {
+    "version": "6, 8"
+  }
 }

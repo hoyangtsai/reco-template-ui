@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-bugly",
+  "rules": {
+    "no-use-before-define": "off",
+    "no-restricted-syntax": "off"
+  }
+}

@@ -3,8 +3,8 @@ module.exports = {
   stylePath: "client/style",
   htmlPath: "client/html",
   imgPath: "client/image",
-  projectName: "foobar",
-  userName: "ben",
+  projectName: "{{name}}",
+  userName: "{{author}}",
   sprites: {
     spritesmith: {
       padding: 4
@@ -24,13 +24,13 @@ module.exports = {
       }
     }
   },
-  browsersList: [
-    'last 4 versions',
-    'Android >= 4.0',
-    'Chrome >= 37',
-    'iOS>=7'
-  ],
   postcss: false, //true or false
-  pageConfig: "config/pageConfig.js",
-  devDirectory: "_tmp"
+  devDirectory: "dist",
+  path: "", //页面层级
+  entry: ["index"], //页面文件列表 Array or Object
+  commonsChunk: {
+    name: null, //公共js、样式文件名，默认common
+    minChunks: null, //至少几个文件出现才抽取公共
+    exclude: []
+  }
 }
