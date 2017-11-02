@@ -3,15 +3,11 @@ module.exports = {
   stylePath: "client/style",
   htmlPath: "client/html",
   imgPath: "client/image",
-  projectName: "{{name}}",
-  userName: "{{author}}",
-  sprites: {
-    spritesmith: {
-      padding: 4
-    }, //雪碧图间距
-    retina: true, //retina屏幕
-    ratio: 3 //图片分倍率
-  },
+  projectName: "nodx-1",
+  userName: "hoyang",
+  template: "template/index.dev.ejs",
+  path: "", //页面层级
+  entry: ["index"], //页面文件列表 Array or Object
   webpack: {
     externals: {
       'react': 'React',
@@ -26,11 +22,16 @@ module.exports = {
   },
   postcss: false, //true or false
   devDirectory: "dist",
-  path: "", //页面层级
-  entry: ["index"], //页面文件列表 Array or Object
   commonsChunk: {
     name: null, //公共js、样式文件名，默认common
     minChunks: null, //至少几个文件出现才抽取公共
     exclude: []
+  },
+  sprites: {
+    spritesmith: {
+      padding: 4
+    }, //雪碧图间距
+    retina: true, //retina屏幕
+    ratio: 3 //图片分倍率
   }
 }
