@@ -3,8 +3,6 @@ module.exports = {
   stylePath: "client/style",
   htmlPath: "client/html",
   imgPath: "client/image",
-  projectName: "nodx-1",
-  userName: "hoyang",
   template: "template/index.dev.ejs",
   path: "", //页面层级
   entry: ["index"], //页面文件列表 Array or Object

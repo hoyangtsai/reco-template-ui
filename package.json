@@ -1,16 +1,9 @@
 {
-  "name": "@tencent/nodinx-template-ui",
-  "version": "1.0.1",
+  "name": "@tencent/reco-template-ui",
+  "version": "1.0.0-beta.01",
   "description": "boilerplate for nodinx framework",
   "scripts": {
-    "autod": "autod",
-    "lint": "eslint .",
-    "test": "npm run lint -- --fix && npm run test-boilerplate",
-    "ci": "npm run lint && npm run ci-boilerplate",
-    "test-boilerplate": "npm run build && npm run install-deps && cd dist && npm test",
-    "ci-boilerplate": "npm run build && npm run install-deps && cd dist && npm run ci",
-    "build": "egg-init dist --force --silent --template=./",
-    "install-deps": "cd dist && ../node_modules/.bin/npminstall autod-egg && ../node_modules/.bin/autod && ../node_modules/.bin/npminstall"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "homepage": "http://git.code.oa.com/WSRD-Tech-Center-Lib/nodinx-template-ui",
   "bugs": "https://github.com/WSRD-Tech-Center-Lib/nodinx/issues",
@@ -19,13 +12,6 @@
     "url": "http://git.code.oa.com/WSRD-Tech-Center-Lib/nodinx-template-ui.git"
   },
   "author": "keithytsai <keithytsai@tencent.com>",
-  "dependencies": {
-  },
-  "devDependencies": {
-    "eslint": "^4.0.0",
-    "eslint-config-bugly": "^14.1.6",
-    "npminstall": "^2.11.2"
-  },
   "ci": {
     "version": "6, 8"
   }
