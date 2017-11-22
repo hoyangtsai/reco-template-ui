@@ -1,12 +1,12 @@
 module.exports = {
-  jsPath: "client/container",
-  stylePath: "client/style",
-  htmlPath: "client/html",
-  imgPath: "client/image",
-  template: "template/index.dev.ejs",
-  path: "", //页面层级
-  entry: ["index"], //页面文件列表 Array or Object
+  postcss: false, //true or false
+
   webpack: {
+    context: path.join(process.cwd(), 'client'),
+    entry: ["container/index"],
+    output: {
+      path: path.join(process.cwd(), 'dist'),
+    },
     externals: {
       'react': 'React',
       'react-dom': 'ReactDOM'
@@ -14,22 +14,30 @@ module.exports = {
     resolve: {
       alias: {
         "components": "", //组件路径
-        "currentDir": process.cwd()
+        "currentDir": path.join(process.cwd(), 'client')
+      }
+    },
+    module: {
+      rules: [
+      ]
+    },
+    plugins: {
+      commonsChunk: {
+        name: null, //公共js、样式文件名，默认common
+        minChunks: null, //至少几个文件出现才抽取公共
+        exclude: []
+      },
+      HtmlWebpackPlugin: {
+        template: path.join(process.cwd(), "template/index.dev.ejs"),
       }
     }
   },
-  postcss: false, //true or false
-  devDirectory: "dist",
-  commonsChunk: {
-    name: null, //公共js、样式文件名，默认common
-    minChunks: null, //至少几个文件出现才抽取公共
-    exclude: []
-  },
+
   sprites: {
     spritesmith: {
       padding: 4
     }, //雪碧图间距
     retina: true, //retina屏幕
     ratio: 3 //图片分倍率
-  }
+  },
 }
