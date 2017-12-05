@@ -1,17 +1,31 @@
 {
   "name": "@tencent/reco-template-ui",
-  "version": "1.0.0-beta.01",
-  "description": "boilerplate for nodinx framework",
+  "version": "0.0.1",
+  "description": "boilerplate for reco framework",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "autod": "autod",
+    "lint": "eslint .",
+    "test": "npm run lint -- --fix && npm run test-boilerplate",
+    "ci": "npm run lint && npm run ci-boilerplate",
+    "test-boilerplate": "npm run build && npm run install-deps && cd dist && npm test",
+    "ci-boilerplate": "npm run build && npm run install-deps && cd dist && npm run ci",
+    "build": "egg-init dist --force --silent --template=./",
+    "install-deps": "cd dist && ../node_modules/.bin/npminstall autod-egg && ../node_modules/.bin/autod && ../node_modules/.bin/npminstall"
   },
-  "homepage": "http://git.code.oa.com/WSRD-Tech-Center-Lib/nodinx-template-ui",
-  "bugs": "https://github.com/WSRD-Tech-Center-Lib/nodinx/issues",
+  "homepage": "http://git.code.oa.com/WSRD-Tech-Center-Lib/reco-template-ui",
+  "bugs": "http://git.code.oa.com/WSRD-Tech-Center-Lib/nodinx/issues",
   "repository": {
     "type": "http",
-    "url": "http://git.code.oa.com/WSRD-Tech-Center-Lib/nodinx-template-ui.git"
+    "url": "http://git.code.oa.com/WSRD-Tech-Center-Lib/reco-template-ui.git"
   },
-  "author": "keithytsai <keithytsai@tencent.com>",
+  "author": "keithytsai (keithytsai@tencent.com)",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "eslint": "^4.0.0",
+    "eslint-config-bugly": "^14.1.6",
+    "npminstall": "^2.11.2"
+  },
   "ci": {
     "version": "6, 8"
   }

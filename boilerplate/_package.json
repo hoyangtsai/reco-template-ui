@@ -10,8 +10,6 @@
   },
   "keywords": [
     "react",
-    "redux",
-    "nodinx",
     "webpack"
   ],
   "scripts": {
