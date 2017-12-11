@@ -2,10 +2,11 @@ const path = require('path');
 
 module.exports = {
   postcss: false, //true or false
+  devDirectory: '_tmp',
 
   webpack: {
-    context: path.join(process.cwd(), 'client'),
-    entry: ["container/index"],
+    context: path.join(process.cwd(), 'client/container'),
+    entry: ["index"],
     output: {
       path: path.join(process.cwd(), 'dist'),
     },
