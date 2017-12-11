@@ -1,6 +1,6 @@
 {
   "name": "@tencent/reco-template-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "boilerplate for reco framework",
   "scripts": {
     "autod": "autod",
@@ -19,8 +19,7 @@
     "url": "http://git.code.oa.com/WSRD-Tech-Center-Lib/reco-template-ui.git"
   },
   "author": "keithytsai (keithytsai@tencent.com)",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^4.0.0",
     "eslint-config-bugly": "^14.1.6",
