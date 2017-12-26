@@ -1,4 +1,5 @@
 const path = require('path');
+const pkgJson = require('../package.json');
 
 module.exports = {
   postcss: false, //true or false
@@ -27,13 +28,21 @@ module.exports = {
     plugins: {
       commonsChunk: {
         name: null, //公共js、样式文件名，默认common
-        minChunks: null, //至少几个文件出现才抽取公共
+        minChunks: false, //至少几个文件出现才抽取公共
         exclude: []
       },
       HtmlWebpackPlugin: {
         template: path.join(process.cwd(), "template/index.dev.ejs"),
       }
     }
+  },
+
+  upload: {
+    project: pkgJson.name,
+    user: pkgJson.author,
+    host: 'http://wapstatic.sparta.html5.qq.com/upload',
+    timeout: 30000,
+    dir: 'publish'
   },
 
   sprites: {
