@@ -9,7 +9,7 @@ module.exports = {
     context: path.join(process.cwd(), 'client/container'),
     entry: ["index"],
     output: {
-      path: path.join(process.cwd(), 'dist'),
+      path: path.join(process.cwd(), 'publish'),
     },
     externals: {
       'react': 'React',
@@ -31,8 +31,8 @@ module.exports = {
         minChunks: false, //至少几个文件出现才抽取公共
         exclude: []
       },
-      HtmlWebpackPlugin: {
-        template: path.join(process.cwd(), "template/index.dev.ejs"),
+      htmlWebpackPlugin: {
+        template: path.join(process.cwd(), "template/index.ejs"),
       }
     }
   },
