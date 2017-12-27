@@ -2,24 +2,29 @@
   "name": "{{name}}",
   "version": "1.0.0",
   "description": "{{description}}",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development reco server"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "devDependencies": {
+    "cross-env": "^5.1.1"
+  },
   "author": "{{author}}",
   "license": "Tencent Private",
   "private": true,
   "engines": {
     "node": ">=6.0.0"
   },
-  "keywords": [
-    "react",
-    "webpack"
-  ],
-  "scripts": {
-    "dev": "cross-env NODE_ENV=development reco server"
-  },
-  "devDependencies": {
-    "cross-env": "^5.1.1"
-  },
   "template": {
     "type": "web",
-    "category": "ui"
+    "category": "ui",
+    "toolkit": ""
   }
 }
