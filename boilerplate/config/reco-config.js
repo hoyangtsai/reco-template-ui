@@ -25,7 +25,8 @@ module.exports = {
       rules: [
       ]
     },
-    plugins: {
+    plugins: [],
+    recoCustom: {
       commonsChunk: {
         name: null, //公共js、样式文件名，默认common
         minChunks: false, //至少几个文件出现才抽取公共
