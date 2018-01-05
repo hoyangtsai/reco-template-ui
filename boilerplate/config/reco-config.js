@@ -33,7 +33,7 @@ module.exports = {
         exclude: []
       },
       htmlWebpackPlugin: {
-        template: path.join(process.cwd(), "template/index.ejs"),
+        template: path.join(process.cwd(), "template/common.ejs"),
       }
     }
   },
