@@ -23,6 +23,19 @@ module.exports = {
     },
     module: {
       rules: [
+        {
+          test: /\.(jpe?g|png|gif|svg|ttf|eot|woff2?)(\?.*)?$/,
+          loader: 'file-loader',
+          exclude: /slice/,
+          options: {
+            name: '[path][name].[ext]'
+          }
+        },
+        {
+          test: /\.(jpe?g|png)$/,
+          loader: 'url-loader',
+          include: /slice/
+        },
       ]
     },
     plugins: [],
@@ -36,6 +49,11 @@ module.exports = {
         template: path.join(process.cwd(), "template/common.ejs"),
       }
     }
+  },
+
+  // https://github.com/beautify-web/js-beautify#options
+  jsbeautify: {
+    "indent_size": 2
   },
 
   upload: {
